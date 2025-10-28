@@ -3,22 +3,41 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- 🔹 MetaPay Branding -->
     <title>MetaPay Business Hub - Manage Your Payments</title>
     <meta name="description" content="MetaPay Business Hub - Send and receive payments, manage your balance, and cash out to your bank account instantly." />
     <meta name="author" content="MetaPay" />
 
+    <!-- 🔹 Open Graph Meta Tags -->
     <meta property="og:title" content="MetaPay Business Hub - Manage Your Payments" />
     <meta property="og:description" content="MetaPay Business Hub - Send and receive payments, manage your balance, and cash out to your bank account instantly." />
     <meta property="og:type" content="website" />
     <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
 
+    <!-- 🔹 Twitter Meta Tags -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@lovable_dev" />
     <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
   </head>
 
   <body>
+    <!-- 🔹 Main App Root -->
     <div id="root"></div>
+
+    <!-- 🔹 Entry Script -->
     <script type="module" src="/src/main.tsx"></script>
+
+    <!-- 🧹 Lovable Cleanup Script -->
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        // Remove any Lovable badge or watermark
+        const badge = document.querySelector("#lovable-badge, [data-lovable]");
+        if (badge) badge.remove();
+
+        // Remove any Lovable tracking or injected scripts
+        document.querySelectorAll('script[src*="lovable.dev"]').forEach(s => s.remove());
+      });
+    </script>
   </body>
 </html>
